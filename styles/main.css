@@ -1,0 +1,19 @@
+    :root {
+      --green: #2f4f44;
+      --green-dark: #253e35;
+      --gold: #d4b25c;
+      --paper: #f4f2ee;
+      --text-light: #f7f7f7;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Inter, sans-serif;
+      background: #fff;
+      color: #222;
+    }
