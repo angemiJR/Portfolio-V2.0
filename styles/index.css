@@ -13,7 +13,8 @@
     }
 
     nav {
-      max-width: 1200px;
+    font-family: 'Montserrat', sans-serif;
+      max-width: 1300px;
       margin: auto;
       padding: 1.2rem 2rem;
       display: flex;
@@ -21,35 +22,18 @@
       align-items: center;
     }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-weight: 600;
-    }
-
-    .logo-mark {
-      width: 28px;
-      height: 28px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 4px;
-    }
-
-    .logo-mark span {
-      border-radius: 4px;
-    }
-
-    .logo-mark span:nth-child(1){ background:#e3a29b; }
-    .logo-mark span:nth-child(2){ background:#9fc6b8; }
-    .logo-mark span:nth-child(3){ background:#b0576b; }
-    .logo-mark span:nth-child(4){ background:#9fc6b8; }
-
+   .logo {
+    display: flex;
+      align-items: flex-start;
+      
+   }
     nav ul {
+        width: 80%;
       list-style: none;
       display: flex;
-      gap: 2rem;
-      font-size: 0.9rem;
+      justify-content: space-evenly;
+      font-size: 1.5rem;
+      font-weight: 300;
     }
 
     nav a {
