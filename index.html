@@ -52,45 +52,16 @@
     </div>
   </section>
 
-  <!-- Simplest typing script -->
+
+<script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
 <script>
-  const words = ["Scrum Master", "Full Stack Developer"];
-  const el = document.getElementById("typing");
-  const wrap = document.querySelector(".typing");
-
-  let wordIndex = 0;
-  let charIndex = 0;
-  let deleting = false;
-  let cursorEnabled = false;
-
-  function tick() {
-    const current = words[wordIndex];
-
-    if (!deleting) {
-      el.textContent = current.slice(0, charIndex++);
-
-      // enable cursor only after the first visible character exists
-      if (!cursorEnabled && el.textContent.length > 0) {
-        wrap.classList.add("cursor-on");
-        cursorEnabled = true;
-      }
-
-      if (charIndex > current.length) {
-        setTimeout(() => (deleting = true), 1200);
-      }
-    } else {
-      el.textContent = current.slice(0, charIndex--);
-      if (charIndex < 0) {
-        deleting = false;
-        wordIndex = (wordIndex + 1) % words.length;
-      }
-    }
-
-    setTimeout(tick, deleting ? 60 : 100);
-  }
-
-  tick();
+    var typed=new Typed("#typing", 
+    {strings: ["Scrum Master", "Full-stack Developer", "Graphic Engineer"],
+        typeSpeed:50,
+        backSpeed:70,
+        loop: true,
+        cursorChar: '|',
+    })
 </script>
-
 </body>
 </html>
