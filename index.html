@@ -1,67 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emilija — Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="./images/Logo.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emilija — Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="./images/Logo.png">
+    <link rel="preload" as="image" href="./images/background_with_logo.png" fetchpriority="high">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!--CSS -->
-   <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/main.css">
-  <link rel="stylesheet" href="./styles/index.css">
+<link rel="preload" as="style"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap">
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
+      media="print" onload="this.media='all'">
+
+<link rel="preload" as="style"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
+      media="print" onload="this.media='all'">
+
+<noscript>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
+</noscript>
+
+    <!--CSS -->
  
+    <link rel="stylesheet" href="./styles/main.css">
+
+
 </head>
 
 <body>
-  <header>
-    <nav>
-      
-        <img src="./images/Logo.png" alt="Logo_Emilija" class="logo">
-      
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Skills</a></li>
-        <li><a href="#">Education</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <nav>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Hello, I’m Emilija</h1>
+            <img src="./images/Logo.png" alt="Logo_Emilija" class="logo">
 
-      
-      <div class="typing">
-        <span id="typing"></span>
-      </div>
-      
-      <a href="#work" class="view_my_work">View My Work →</a>
-    </div>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="tagline">
-      <p>VISUALIZE</p><p>·</p><p>ENGINEER</p><p>·</p><p>DELIVER</p>
-    </div>
-  </section>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hello, I’m Emilija</h1>
 
 
-<script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
-<script>
-    var typed=new Typed("#typing", 
-    {strings: ["Scrum Master", "Full-stack Developer", "Graphic Engineer"],
-        typeSpeed:50,
-        backSpeed:70,
-        loop: true,
-        cursorChar: '|',
-    })
-</script>
+            <div class="typing">
+                <span id="typing"></span>
+            </div>
+
+            <a href="#work" class="view_my_work">View My Work →</a>
+        </div>
+
+        <div class="tagline">
+            <p>VISUALIZE</p>
+            <p>·</p>
+            <p>ENGINEER</p>
+            <p>·</p>
+            <p>DELIVER</p>
+        </div>
+    </section>
+
+
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed("#typing",
+            {
+                strings: ["Scrum Master", "Full-stack Developer", "Graphic Engineer"],
+                typeSpeed: 50,
+                backSpeed: 70,
+                loop: true,
+                cursorChar: '|',
+            })
+    </script>
 </body>
+
 </html>

@@ -21,6 +21,7 @@ nav {
 
 .logo{
     height: 5rem;
+    width: auto;
     transform: scaleX(-1);
     
 }
