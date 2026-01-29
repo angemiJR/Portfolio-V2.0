@@ -1,5 +1,7 @@
 @import url("./reset.css");
 @import url("./index.css");
+@import url("./about.css");
+
 
 :root {
     --green: #2f4f44;
@@ -12,8 +14,8 @@
 body {
     width: 100vw;
     height: auto;
-    display: flex;
-    align-items: center;
+    display: block;
+    
     font-family: 'Montserrat', sans-serif;
     background: #fff;
     color: #222;
