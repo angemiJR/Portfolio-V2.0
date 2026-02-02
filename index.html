@@ -10,29 +10,25 @@
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preload" as="style"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap">
-<link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
-      media="print" onload="this.media='all'">
-
-<link rel="preload" as="style"
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
-      media="print" onload="this.media='all'">
-
-<noscript>
-  <link rel="stylesheet"
+    <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap">
-  <link rel="stylesheet"
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
+        media="print" onload="this.media='all'">
+
+    <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
-</noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
+        media="print" onload="this.media='all'">
+
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
+    </noscript>
 
     <!--CSS -->
- 
+
     <link rel="stylesheet" href="./styles/main.css">
 
 
@@ -41,9 +37,9 @@
 <body>
     <header>
         <nav>
-
-            <img src="./images/Logo.png" alt="Logo_Emilija" class="logo">
-
+            <a href="./index.html">
+                <img src="./images/Logo.png" alt="Logo_Emilija" class="logo">
+            </a>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#">Work</a></li>
@@ -76,15 +72,15 @@
     </section>
 
 
-<div id="about"></div>
+    <div id="about"></div>
 
-<script>
-  fetch("./pages/about.html")
-    .then(r => r.text())
-    .then(html => {
-      document.getElementById("about").innerHTML = html;
-    });
-</script>
+    <script>
+        fetch("./pages/about.html")
+            .then(r => r.text())
+            .then(html => {
+                document.getElementById("about").innerHTML = html;
+            });
+    </script>
 
 
 
