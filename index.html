@@ -42,7 +42,7 @@
             </a>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#">Work</a></li>
+                <li><a href="#work">Work</a></li>
                 <li><a href="#">Skills</a></li>
                 <li><a href="#">Education</a></li>
                 <li><a href="#">Contact</a></li>
@@ -82,6 +82,15 @@
             });
     </script>
 
+    <div id="work"></div>
+
+    <script>
+        fetch("./pages/work.html")
+            .then(r => r.text())
+            .then(html => {
+                document.getElementById("work").innerHTML = html;
+            });
+    </script>
 
 
 
