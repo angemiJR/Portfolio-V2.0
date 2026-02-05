@@ -18,6 +18,7 @@
     position: relative;
 
 
+
 }
 
 .about_background {
@@ -54,6 +55,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
+   
 
 }
 

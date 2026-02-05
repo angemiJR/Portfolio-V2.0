@@ -26,6 +26,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
     </noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     <!--CSS -->
 
@@ -85,13 +86,67 @@
     <div id="work"></div>
 
     <script>
+        // 1) Load work.html
         fetch("./pages/work.html")
             .then(r => r.text())
-            .then(html => {
+            .then(async (html) => {
                 document.getElementById("work").innerHTML = html;
-            });
-    </script>
 
+                // 2) Load Swiper JS (only once)
+                await loadScriptOnce("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js");
+
+                // 3) Init Swiper after the DOM exists
+                const workSwiperEl = document.querySelector(".work-swiper");
+                if (!workSwiperEl) return;
+
+                new Swiper(workSwiperEl, {
+                    effect: "coverflow",
+                    slidesPerView: 3,
+                    centeredSlides: true,
+                    loop: false,
+                    grabCursor: true,
+
+                    // ✅ THIS makes left/right slide come to front on click
+                    slideToClickedSlide: true,
+
+                    // ✅ prevent Swiper from blocking clicks
+                    preventClicks: false,
+                    preventClicksPropagation: false,
+                    speed: 650,
+
+                    coverflowEffect: {
+                        rotate: 28,
+                        depth: 240,
+                        modifier: 1,
+                        stretch: 0,
+                        slideShadows: false
+                    },
+
+                    pagination: {
+                        el: workSwiperEl.querySelector(".swiper-pagination"),
+                        clickable: true
+                    },
+                    navigation: {
+                        nextEl: workSwiperEl.querySelector(".swiper-button-next"),
+                        prevEl: workSwiperEl.querySelector(".swiper-button-prev")
+                    }
+                });
+
+
+
+            });
+
+        function loadScriptOnce(src) {
+            return new Promise((resolve, reject) => {
+                if (document.querySelector(`script[src="${src}"]`)) return resolve();
+                const s = document.createElement("script");
+                s.src = src;
+                s.onload = resolve;
+                s.onerror = reject;
+                document.body.appendChild(s);
+            });
+        }
+    </script>
 
 
     <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>

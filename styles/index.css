@@ -6,6 +6,7 @@ header {
     background: var(--paper);
     backdrop-filter: blur(6px);
     z-index: 10;
+   
 }
 
 nav {
