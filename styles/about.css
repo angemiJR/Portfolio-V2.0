@@ -180,7 +180,7 @@
     border: 1px solid rgb(184, 184, 184);
     border-radius: 5px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
-    background-color: rgba(253, 253, 253, 0.8);
+    background-color: var(--paper_opaque);
 
 
 }

@@ -44,7 +44,7 @@
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#work">Work</a></li>
-                <li><a href="#">Skills</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#">Education</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -112,7 +112,7 @@
                     // ✅ prevent Swiper from blocking clicks
                     preventClicks: false,
                     preventClicksPropagation: false,
-                    speed: 650,
+                    speed: 850,
 
                     coverflowEffect: {
                         rotate: 28,
@@ -146,6 +146,17 @@
                 document.body.appendChild(s);
             });
         }
+    </script>
+
+
+    <div id="skills"></div>
+
+    <script>
+        fetch("./pages/skills.html")
+            .then(r => r.text())
+            .then(html => {
+                document.getElementById("skills").innerHTML = html;
+            });
     </script>
 
 
