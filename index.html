@@ -45,7 +45,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#work">Work</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#">Education</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
@@ -156,6 +156,16 @@
             .then(r => r.text())
             .then(html => {
                 document.getElementById("skills").innerHTML = html;
+            });
+    </script>
+
+     <div id="education"></div>
+
+    <script>
+        fetch("./pages/education.html")
+            .then(r => r.text())
+            .then(html => {
+                document.getElementById("education").innerHTML = html;
             });
     </script>
 

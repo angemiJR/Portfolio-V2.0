@@ -3,10 +3,12 @@
 @import url("./about.css");
 @import url("./work.css");
 @import url("./skills.css");
+@import url("./education.css");
 
 
 :root {
-    --green: #2f4f44;
+    --green: rgb(47, 79, 68);
+    --green_opaque:rgba(47, 79, 68,0.5);
     --gold: #d4b25c;
     --paper: rgb(253 253 253);
     --paper_opaque: rgba(253, 253, 253, 0.7);
