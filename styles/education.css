@@ -42,13 +42,7 @@
     text-align: center;
 }
 
-.edu-title {
-    margin: 0 0 2rem;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    font-weight: 500;
-    color: var(--gold);
-}
+
 
 .edu-subtitle {
     width: 100%;
@@ -165,6 +159,7 @@
     margin: 0 0 4px;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
+    text-align: left;
     font-weight: 600;
     color: var(--green);
 }

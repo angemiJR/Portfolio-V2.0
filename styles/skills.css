@@ -153,7 +153,8 @@ ul b{
   font-weight: 400;
   margin: 0 0 0.9rem;
   color: var(--green);
-  width: 90%;
+  text-align: left;
+ 
 }
 
 

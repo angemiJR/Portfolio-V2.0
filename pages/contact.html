@@ -1,0 +1,100 @@
+<section class="contact" id="contact">
+    <div class="my_work_background"></div>
+
+    <div class="contact_box">
+        <h2 class="title">Contact</h2>
+
+        <h3 class="subtitle">Feel free to <b>get in touch.</b></h3>
+
+        <p class="contact-text">
+            Reach out to discuss opportunities, collaborations, or projects.
+        </p>
+
+        <a href="documents/Emilija_CV.pdf" download class="cv-btn">
+            Download my CV
+        </a>
+    </div>
+
+    <div class="contact_cards">
+
+        <div class="contact_card">
+            <h4 class="card-title">
+                <i data-lucide="mail"></i>
+                <span>Email</span>
+            </h4>
+            <p>emilija@email.com</p>
+        </div>
+
+        <div class="contact_card">
+            <h4 class="card-title">
+                <i data-lucide="phone"></i>
+                <span>Phone</span>
+            </h4>
+            <p>+46 70 000 0000</p>
+        </div>
+
+        <div class="contact_card">
+            <h4 class="card-title">
+                <i data-lucide="map-pin"></i>
+                <span>Location</span>
+            </h4>
+            <p>Sweden</p>
+        </div>
+
+    </div>
+
+    <div class="contact_form_box">
+        <h3>Or send me a message.</h3>
+
+        <form class="contact_form" action="https://formspree.io/xxx" method="POST">
+
+            <div class="form_row">
+                <input type="text" id="name" name="name" placeholder="Your Name" required autocomplete="name">
+                <input type="email" id="email" name="email" placeholder="Your Email" required autocomplete="email">
+            </div>
+
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+            <!-- Optional: email subject you receive -->
+            <input type="hidden" name="_subject" value="New message from Emilija portfolio">
+
+            <button type="submit" class="send-btn">Send Message</button>
+        </form>
+
+
+    </div>
+
+    <footer class="footer">
+
+        <div class="footer_content">
+
+            <div class="footer_icons">
+                <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+                    <i data-lucide="github"></i>
+                </a>
+
+                <a href="mailto:emilija@email.com" aria-label="Email">
+                    <i data-lucide="mail"></i>
+                </a>
+
+                <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
+                    <i data-lucide="linkedin"></i>
+                </a>
+            </div>
+
+            <p class="footer_text">
+                © 2026 angemiJR. Designed & built with clarity.
+            </p>
+
+        </div>
+
+    </footer>
+
+</section>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+    lucide.createIcons();
+</script>
