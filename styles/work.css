@@ -1,10 +1,6 @@
 /* SECTION WRAPPER */
 #work {
-  width: 100%;
   padding-top: 110px;
-  display: flex;
-  align-items: center;
-  position: relative;
   overflow: visible;
 }
 
@@ -18,19 +14,10 @@
   position: relative;
 }
 
-/* BACKGROUND BRUSH */
+/* BACKGROUND BRUSH (unique parts) */
 .my_work_background {
-  width: 100%;
-  height: 50%;
   margin-top: 5%;
-  min-height: 600px;
-  background: var(--paper) url("../images/about_background_second.png") no-repeat;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
   transform: rotate(180deg);
-  z-index: -10;
 }
 
 /* TITLE */
@@ -43,9 +30,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-
 }
-
 
 .work_title h3 {
   max-width: 700px;
@@ -68,22 +53,19 @@
   overflow: hidden;
 }
 
-/* keep swiper internals positioned so z-index works */
 .work-swiper .swiper-wrapper {
   align-items: stretch;
   position: relative;
 }
 
-/* Default: hide all slides + disable clicks */
 .work-swiper .swiper-slide {
   opacity: 0;
   pointer-events: none;
-  position: relative; /* needed for z-index stacking */
+  position: relative;
   z-index: 1;
   transition: opacity 200ms ease;
 }
 
-/* Show only 3 slides */
 .work-swiper .swiper-slide-prev,
 .work-swiper .swiper-slide-active,
 .work-swiper .swiper-slide-next {
@@ -91,7 +73,6 @@
   pointer-events: auto;
 }
 
-/* Stacking: center on top, sides below BUT still clickable */
 .work-swiper .swiper-slide-prev,
 .work-swiper .swiper-slide-next {
   z-index: 5;
@@ -224,5 +205,40 @@
 
   .work-swiper {
     max-width: 520px;
+  }
+}
+/* =========================
+   WORK RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+  .work-swiper {
+    height: auto;
+    min-height: 24rem;
+  }
+
+  .thumb {
+    width: 220px;
+    height: 150px;
+  }
+
+  .thumb img {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  
+  .work-swiper {
+    max-width: 92%;
+  }
+
+  .work-card {
+    height: auto;
+    padding: 16px;
+  }
+
+  .work-card h4 {
+    font-size: 1.25rem;
   }
 }
