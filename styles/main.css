@@ -126,6 +126,7 @@ ul b {
 .about_textbox h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
+    text-align: left;
     line-height: 1.4;
     font-weight: 400;
     margin-bottom: 1.2rem;
