@@ -179,13 +179,28 @@
     }
 
     .bottom_inner_box {
-        flex-wrap: wrap;
+       
+        flex-direction: column !important;
+        width: 100% !important;
         gap: 16px;
-        align-items: flex-start;
+        align-items: center !important;
     }
 
     .about_small_box2 {
         width: 100%;
+    }
+
+    .bottom_outer_box{
+        width: 80% ;
+        display: flex;
+        align-items: flex-start;
+    
+    }
+
+    .about_small_box{
+        width: 90%;
+        padding: 0;
+
     }
 }
 
