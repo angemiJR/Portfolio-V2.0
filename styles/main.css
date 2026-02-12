@@ -24,7 +24,7 @@ body {
     background: #fdfdfd;
 }
 
-/* Typography helpers */
+
 .title {
     font-family: "Montserrat", serif;
     font-size: 36px;
@@ -34,7 +34,7 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* Keep the final effective .subtitle styling (was overridden in contact.css before) */
+
 .subtitle {
     max-width: 700px;
     font-size: 1.6rem;
@@ -64,7 +64,7 @@ ul b {
     font-weight: 600;
 }
 
-/* Shared section anchor containers */
+
 #about,
 #skills,
 #education,
@@ -76,7 +76,7 @@ ul b {
     overflow: hidden;
 }
 
-/* Work uses overflow: visible (kept in work.css) */
+
 #work {
     width: 100%;
     display: flex;
@@ -84,7 +84,7 @@ ul b {
     position: relative;
 }
 
-/* Shared “intro” layout used by About + Skills */
+
 .about_box,
 .skills_box {
     width: 100%;
@@ -122,7 +122,7 @@ ul b {
     color: var(--gold);
 }
 
-/* Note: no text-align here (About overrides to left; Skills stays centered via global h3) */
+
 .about_textbox h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
@@ -147,7 +147,7 @@ ul b {
     color: var(--paper);
 }
 
-/* Shared icon placement */
+
 .small_logo {
     grid-column: 2;
     grid-row: 1;
@@ -157,7 +157,7 @@ ul b {
     margin: 10px;
 }
 
-/* Shared “brush background” used by Work/Education/Contact */
+
 .my_work_background {
     width: 100%;
     height: 50%;
@@ -170,7 +170,7 @@ ul b {
     left: 0;
 }
 
-/* Shared surface styling (same values across multiple components) */
+
 .about_small_box,
 .about_small_box2,
 .skills_small_box,
@@ -183,7 +183,7 @@ ul b {
     background-color: var(--paper_opaque);
 }
 
-/* Shared “approach boxes” layout (used in Skills section) */
+
 .bottom_outer_box_2 {
     width: 70%;
     min-width: 200px;
@@ -220,13 +220,11 @@ ul b {
     color: var(--gold);
 }
 
-/* =========================
-   RESPONSIVE + LARGE SCREENS
-   ========================= */
+/* RESPONSIVE + LARGE SCREENS */
 
-/* Keep content readable on very large screens */
+
 @media (min-width: 1600px) {
-  /* Common “70% width” blocks: cap them so they don’t become too wide */
+  
   .middle_box,
   .bottom_outer_box,
   .bottom_outer_box_2,
@@ -241,7 +239,7 @@ ul b {
     width: min(70%, 1200px);
   }
 
-  /* Hero text can scale a bit for big screens */
+  
   .hero-content {
     max-width: 720px;
   }

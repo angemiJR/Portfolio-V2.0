@@ -6,7 +6,6 @@ header {
     background: var(--paper);
     backdrop-filter: blur(6px);
     z-index: 10;
-   
 }
 
 nav {
@@ -19,11 +18,17 @@ nav {
     align-items: center;
 }
 
+/* brand wrapper around the logo */
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .logo {
     height: 5rem;
     width: auto;
     transform: scaleX(-1);
-
 }
 
 nav ul {
@@ -43,7 +48,7 @@ nav a:hover {
     color: #999;
 }
 
-
+/* HERO */
 .hero {
     width: 100%;
     margin-top: 130px;
@@ -56,7 +61,6 @@ nav a:hover {
     background: var(--paper) url("../images/background_with_logo.png") no-repeat;
     background-size: cover;
     background-position: center 15%;
-
 }
 
 .hero-content {
@@ -65,13 +69,12 @@ nav a:hover {
 }
 
 .hero h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 2.8rem;
     font-weight: 400;
     margin-bottom: 1.2rem;
     color: var(--gold);
 }
-
 
 .typing {
     font-family: "JetBrains Mono", monospace;
@@ -80,7 +83,6 @@ nav a:hover {
     line-height: 1.6em;
     min-height: 1.6em;
 }
-
 
 .view_my_work {
     display: inline-block;
@@ -98,7 +100,6 @@ nav a:hover {
     color: var(--green);
 }
 
-
 .tagline {
     position: absolute;
     bottom: 2rem;
@@ -113,83 +114,176 @@ nav a:hover {
 }
 
 /* =========================
-   NAV + HERO RESPONSIVE
+   MOBILE NAV (BURGER MENU)
    ========================= */
 
-@media (max-width: 900px) {
-  header {
-    min-height: unset;
-  }
+/* Burger button hidden on desktop */
+.nav-toggle {
+    display: none;
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    background: rgba(253, 253, 253, 0.8);
+    backdrop-filter: blur(6px);
+    cursor: pointer;
 
-  nav {
-    min-width: unset; /* critical: your current min-width blocks mobile */
-    padding: 1rem 1.2rem;
-    gap: 14px;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-  }
-
-  nav ul {
-    gap: 1.6rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
     padding: 0;
-    margin: 0;
-  }
-
-  nav a {
-    font-size: 1.1rem;
-  }
-
-  .logo {
-    height: 3.8rem;
-  }
-
-  .hero {
-    margin-top: 120px;
-    height: auto;
-    min-height: calc(100vh - 120px);
-    padding: 30px 0;
-    background-position: center 20%;
-  }
-
-  .hero-content {
-    padding: 2.2rem 1.4rem;
-    max-width: 680px;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .typing {
-    font-size: 1.2rem;
-  }
-
-  .tagline {
-    position: static;
-    transform: none;
-    margin-top: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-  }
 }
 
+.nav-toggle-bar {
+    width: 22px;
+    height: 2px;
+    background: var(--green);
+    display: block;
+    border-radius: 999px;
+    transition: transform 200ms ease, opacity 200ms ease;
+}
+
+/* Animate burger -> X */
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile layout */
+@media (max-width: 900px) {
+    header {
+        min-height: 72px;
+    }
+
+    nav {
+        min-width: unset;
+
+        max-width: 1300px;
+        padding: 0.9rem 1.2rem;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        position: relative;
+        /* dropdown anchors to nav */
+    }
+
+    .logo {
+        height: 3.6rem;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+    }
+
+    /* Dropdown panel */
+    nav ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        display: none;
+        flex-direction: column;
+        gap: 0;
+
+        margin: 0;
+        padding: 10px 0;
+
+        background: rgba(253, 253, 253, 0.92);
+        backdrop-filter: blur(8px);
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+        z-index: 9999;
+    }
+
+    nav ul.is-open {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 14px 18px;
+        font-size: 1.1rem;
+    }
+
+    nav ul li a:hover {
+        background: rgba(47, 79, 68, 0.06);
+        color: var(--green);
+    }
+
+    /* Hero under smaller header */
+    .hero {
+        margin-top: 90px;
+        min-height: calc(100vh - 90px);
+        padding: 20px 0;
+
+      
+        /* fills empty space */
+
+        align-items: flex-start;
+        justify-content: center;
+        position: relative;
+    }
+
+
+    .hero-content {
+        padding: 6rem 1.2rem;
+        max-width: 680px;
+    }
+
+    .hero h1 {
+        font-size: 2.1rem;
+    }
+
+    .typing {
+        font-size: 1.15rem;
+    }
+
+    /* Optional: hide tagline on mobile */
+    /* TAGLINE ON MOBILE — inside green hero */
+    .tagline {
+        position: absolute;
+        bottom: 80px;
+      
+        left: 50%;
+        transform: translateX(-50%);
+
+        color: var(--green);
+      
+
+        font-size: 0.9rem;
+        letter-spacing: 0.12em;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+        opacity: 0.85;
+        z-index: 3;
+    }
+
+}
+
+/* Smaller phones */
 @media (max-width: 480px) {
-  nav ul {
-    gap: 1rem;
-  }
+    nav ul li a {
+        font-size: 1rem;
+        padding: 12px 16px;
+    }
 
-  nav a {
-    font-size: 1rem;
-  }
+    .hero h1 {
+        font-size: 1.9rem;
+    }
 
-  .hero h1 {
-    font-size: 1.9rem;
-  }
-
-  .view_my_work {
-    font-size: 0.9rem;
-  }
+    .view_my_work {
+        font-size: 0.9rem;
+    }
 }

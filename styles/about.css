@@ -96,9 +96,7 @@
     height: 7rem;
 }
 
-/* =========================
-   ABOUT RESPONSIVE
-   ========================= */
+/* ABOUT RESPONSIVE */
 
 @media (max-width: 1024px) {
   .bottom_inner_box {

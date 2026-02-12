@@ -170,9 +170,7 @@
     font-weight: 500;
     color: var(--paper);
 }
-/* =========================
-   EDUCATION RESPONSIVE
-   ========================= */
+/* EDUCATION RESPONSIVE */
 
 @media (max-width: 900px) {
   .t-item {

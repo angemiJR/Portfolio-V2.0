@@ -32,10 +32,17 @@
     <!-- HEADER -->
     <header>
         <nav>
-            <a href="./index.html">
+            <a href="./index.html" class="brand">
                 <img src="./images/Logo.png" alt="Logo Emilija" class="logo">
             </a>
-            <ul>
+
+            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+
+            <ul id="nav-menu">
                 <li><a href="#about">About</a></li>
                 <li><a href="#work">Work</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -43,6 +50,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+
     </header>
 
     <!-- HERO -->
@@ -75,6 +83,39 @@
 
     <!-- Typed.js -->
     <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+    <script>
+        // Mobile nav toggle
+        const toggle = () => {
+            const btn = document.querySelector(".nav-toggle");
+            const menu = document.querySelector("#nav-menu");
+            const isOpen = menu.classList.toggle("is-open");
+            btn.setAttribute("aria-expanded", String(isOpen));
+        };
+
+        window.addEventListener("DOMContentLoaded", () => {
+            const btn = document.querySelector(".nav-toggle");
+            const menu = document.querySelector("#nav-menu");
+
+            if (!btn || !menu) return;
+
+            btn.addEventListener("click", toggle);
+
+            // Close menu after clicking a link
+            menu.addEventListener("click", (e) => {
+                const link = e.target.closest("a");
+                if (!link) return;
+                menu.classList.remove("is-open");
+                btn.setAttribute("aria-expanded", "false");
+            });
+
+            // Close on Escape
+            document.addEventListener("keydown", (e) => {
+                if (e.key !== "Escape") return;
+                menu.classList.remove("is-open");
+                btn.setAttribute("aria-expanded", "false");
+            });
+        });
+    </script>
 
     <script>
         /*  Helper Functions */
