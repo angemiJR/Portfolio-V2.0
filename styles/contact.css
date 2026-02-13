@@ -64,13 +64,14 @@
   font-size: 1.2rem;
 }
 
-.card-title [data-lucide] {
+/* You use <img>, so style images instead of [data-lucide] */
+.card-title img {
   width: 22px;
   height: 22px;
-  stroke: var(--green);
-  opacity: 0.9;
+  display: block;
 }
 
+/* Cards wrapper */
 .contact_cards {
   width: 70%;
   display: flex;
@@ -85,15 +86,6 @@
   padding: 25px;
   border-radius: 8px;
   text-align: center;
-}
-
-/* Lucide icons */
-.contact_card [data-lucide] {
-  width: 28px;
-  height: 28px;
-  margin-bottom: 10px;
-  stroke: var(--gold);
-  opacity: 0.9;
 }
 
 .contact_card h4 {
@@ -164,6 +156,7 @@
   background-color: var(--green);
 }
 
+/* Footer */
 .footer {
   width: 100%;
   padding: 40px 0;
@@ -202,10 +195,11 @@
   transform: translateY(-3px);
 }
 
-.footer_icons [data-lucide] {
+/* Footer icon images */
+.footer_icons img {
   width: 22px;
   height: 22px;
-  stroke: var(--paper);
+  display: block;
 }
 
 .footer_text {
@@ -214,8 +208,25 @@
   color: var(--green);
   opacity: 0.8;
 }
-/* CONTACT RESPONSIVE */
 
+/* =========================
+   LARGE SCREENS (>=1600px)
+   same pattern as Education
+   ========================= */
+@media (min-width: 1600px) {
+  .contact_box,
+  .contact_cards,
+  .contact_form_box,
+  .footer_content {
+    width: 60%;
+  }
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+/* keep your 900px behavior */
 @media (max-width: 900px) {
   .contact_cards {
     flex-wrap: wrap;
@@ -226,20 +237,57 @@
   }
 }
 
+/* MOBILE (<=820px) like Education */
 @media (max-width: 820px) {
+
+  .contact_box,
+  .contact_cards,
+  .contact_form_box,
+  .footer_content {
+    width: 90%;
+  }
+
+  /* stack the cards */
+  .contact_cards {
+    width: 70%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .contact_card {
+    min-width: unset;
+    padding: 20px;
+  }
+
+  /* form becomes one column */
   .form_row {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .contact_form_box {
+    width: 70%;
     padding: 20px;
   }
-}
 
-@media (max-width: 480px) {
+  /* full-width buttons */
   .cv-btn {
-    width: 100%;
+    width: 70%;
     text-align: center;
     padding: 14px 18px;
+  }
+
+  .send-btn {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  /* footer icons wrap nicely */
+  .footer_icons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
   }
 }

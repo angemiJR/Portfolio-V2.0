@@ -23,8 +23,7 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="./styles/main.css">
 
-    <!--Lucide -->
-    <script defer src="https://unpkg.com/lucide@latest"></script>
+    
 </head>
 
 <body>
@@ -126,8 +125,6 @@
                 .then(html => {
                     document.getElementById(id).innerHTML = html;
 
-                    // Re-render Lucide icons for any injected section
-                    if (window.lucide) lucide.createIcons();
 
                     // Optional callback (e.g. Swiper init)
                     if (typeof after === "function") after();

@@ -10,7 +10,7 @@
     --green: rgb(47, 79, 68);
     --green_opaque: rgba(47, 79, 68, 0.5);
     --gold: #d4b25c;
-    --paper: rgb(253 253 253);
+    --paper: #fdfdfd;
     --paper_opaque: rgba(253, 253, 253, 0.7);
 }
 
@@ -282,6 +282,9 @@ ul b {
 
   h3 {
     font-size: 16px;
+  }
+  .about_small_box2 h4 b {
+    font-weight: 800;
   }
 }
 
