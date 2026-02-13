@@ -211,6 +211,16 @@
   opacity: 0.8;
 }
 
+.form-status{
+  margin-top: 12px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: var(--green);
+  min-height: 20px; /* prevents layout jump */
+}
+
+
 /* =========================
    LARGE SCREENS (>=1600px)
    same pattern as Education
