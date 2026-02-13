@@ -176,17 +176,10 @@
 
     .education_box,
     .timeline {
-        width: 60%;
+        max-width: 1400px;
     }
 
-    .t-item {
-        grid-template-columns: 96px 1fr;
-        gap: 22px;
-    }
-
-    .t-card {
-        padding-left: 56px;
-    }
+  
 }
 
 /* MOBILE */

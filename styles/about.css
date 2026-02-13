@@ -212,7 +212,19 @@
     min-width: unset;
   }
 }
+@media (min-width: 1600px){
+#about .middle_box{
+    max-width: 1400px;
+}
+#about .emilija_photo{
+    width: 25rem;
+    padding-right: 5rem;
+}
 
+#about .bottom_outer_box{
+    max-width: 1400px;
+}
+}
 
 @media (max-width: 820px) {
   #about {
