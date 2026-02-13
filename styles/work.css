@@ -1,4 +1,7 @@
-/* SECTION WRAPPER */
+/* =========================
+   SECTION WRAPPER
+   ========================= */
+
 #work {
   padding-top: 110px;
   overflow: visible;
@@ -14,13 +17,16 @@
   position: relative;
 }
 
-/* BACKGROUND BRUSH (unique parts) */
+/* BACKGROUND BRUSH */
 .my_work_background {
   margin-top: 5%;
   transform: rotate(180deg);
 }
 
-/* TITLE */
+/* =========================
+   TITLE
+   ========================= */
+
 .work_title {
   width: 70%;
   min-width: 280px;
@@ -42,47 +48,53 @@
   margin: 0;
 }
 
-/* SWIPER */
-.work-swiper {
+/* =========================
+   GLIDE CONTAINER
+   ========================= */
+
+.work-glide {
   width: 100%;
+  height: 35rem;
   max-width: 1028px;
-  height: 25rem;
+  min-height: 25rem;
   margin: 0 auto;
-  padding: 30px 0 60px;
+ 
   position: relative;
   overflow: hidden;
 }
 
-.work-swiper .swiper-wrapper {
+/* IMPORTANT — remove default UL spacing */
+.work-glide .glide__slides {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 100%;
   align-items: stretch;
-  position: relative;
 }
 
-.work-swiper .swiper-slide {
-  opacity: 0;
-  pointer-events: none;
-  position: relative;
-  z-index: 1;
+.work-glide .glide__track {
+  height: 100%;
+}
+
+/* Slide */
+.work-glide .glide__slide {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+
+  opacity: 0.6;
   transition: opacity 200ms ease;
 }
 
-.work-swiper .swiper-slide-prev,
-.work-swiper .swiper-slide-active,
-.work-swiper .swiper-slide-next {
+.work-glide .glide__slide--active {
   opacity: 1;
-  pointer-events: auto;
 }
 
-.work-swiper .swiper-slide-prev,
-.work-swiper .swiper-slide-next {
-  z-index: 5;
-}
+/* =========================
+   CARD
+   ========================= */
 
-.work-swiper .swiper-slide-active {
-  z-index: 10;
-}
-
-/* CARD */
 .work-card {
   width: 100%;
   height: 90%;
@@ -90,15 +102,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+
   background: var(--paper);
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
   padding: 18px 18px 20px;
   overflow: hidden;
 }
 
-/* IMAGE */
+/* =========================
+   IMAGE
+   ========================= */
+
 .thumb {
   width: 250px;
   height: 160px;
@@ -116,20 +133,24 @@
   display: block;
 }
 
-/* TEXT */
+/* =========================
+   TEXT
+   ========================= */
+
 .work-card h4 {
   margin: 10px 0 6px;
   color: var(--green);
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 600;
   text-align: center;
   line-height: 1.5;
 }
 
 .work-card p {
-  margin: 6px 0;
-  color: rgba(47, 79, 68, 0.85);
-  font-size: 14px;
+ 
+  color:var(--green);
+  font-size: 0.9rem;
+  line-height: 1.2rem;
 }
 
 .work-card .tech {
@@ -137,7 +158,10 @@
   font-weight: 600;
 }
 
-/* TAGS */
+/* =========================
+   TAGS
+   ========================= */
+
 .tags {
   display: flex;
   gap: 8px;
@@ -147,98 +171,135 @@
 }
 
 .tags span {
-  font-size: 12px;
-  padding: 6px 10px;
-  border-radius: 999px;
+  font-size: 1rem;
+  padding: 10px 10px;
+  border-radius: 8px;
   background: rgba(47, 79, 68, 0.08);
-  color: rgba(47, 79, 68, 0.9);
+  color: var(--green);
 }
 
-/* BUTTON */
+/* =========================
+   BUTTON
+   ========================= */
+
 .btn {
   display: inline-block;
   padding: 10px 18px;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  background: rgba(255, 255, 255, 0.6);
+  background: var(--paper);
   color: var(--green);
   text-decoration: none;
   z-index: 10;
 }
 
 .btn:hover {
-  background: rgba(255, 255, 255, 0.75);
+  background:var(--green_opaque);
 }
 
-/* SWIPER UI */
-.work-swiper .swiper-button-prev,
-.work-swiper .swiper-button-next {
+/* =========================
+   GLIDE ARROWS
+   ========================= */
+
+.work-glide .glide__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
   color: var(--green);
-  z-index: 9999;
-  pointer-events: auto;
 }
 
-.work-swiper .swiper-button-prev::after,
-.work-swiper .swiper-button-next::after {
+/* Arrow symbols */
+.work-glide .glide__arrow--left::before {
+  content: "‹";
   font-size: 28px;
+  line-height: 44px;
 }
 
-.work-swiper .swiper-pagination {
+.work-glide .glide__arrow--right::before {
+  content: "›";
+  font-size: 28px;
+  line-height: 44px;
+}
+
+.work-glide .glide__arrow--left { left: 0; }
+.work-glide .glide__arrow--right { right: 0; }
+
+/* =========================
+   BULLETS
+   ========================= */
+
+.work-glide .glide__bullets {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
   z-index: 9999;
 }
 
-.work-swiper .swiper-pagination-bullet-active {
+.work-glide .glide__bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: rgba(47, 79, 68, 0.25);
+}
+
+.work-glide .glide__bullet--active {
   background: var(--green);
 }
 
-/* RESPONSIVE */
-@media (max-width: 1023px) {
-  .work-swiper {
-    max-width: 720px;
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (min-width: 1600px){
+
+  .work_title,
+  .work-glide{
+    width: 60%;
+    max-width: none;
   }
+
 }
 
-@media (max-width: 768px) {
-  .work_title {
+@media (max-width: 820px){
+
+  .work_title,
+  .work-glide{
     width: 90%;
   }
 
-  .work-swiper {
-    max-width: 520px;
-  }
-}
-/* =========================
-   WORK RESPONSIVE
-   ========================= */
-
-@media (max-width: 900px) {
-  .work-swiper {
+  /* let slider grow naturally */
+  .work-glide{
     height: auto;
     min-height: 24rem;
   }
 
-  .thumb {
-    width: 220px;
-    height: 150px;
-  }
-
-  .thumb img {
-    max-width: 220px;
-  }
-}
-
-@media (max-width: 600px) {
-  
-  .work-swiper {
-    max-width: 92%;
-  }
-
-  .work-card {
+  /* cards adapt to content */
+  .work-card{
     height: auto;
     padding: 16px;
   }
 
-  .work-card h4 {
-    font-size: 1.25rem;
+  /* scale preview image */
+  .thumb{
+    width: 220px;
+    height: 150px;
   }
+
+  .thumb img{
+    max-width: 220px;
+  }
+
 }
+
