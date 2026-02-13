@@ -16,9 +16,10 @@
 
 body {
     width: 100vw;
+    
     height: auto;
     display: block;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 
     font-family: 'Montserrat', sans-serif;
     background: #fdfdfd;
@@ -94,6 +95,7 @@ ul b {
     align-items: center;
     justify-content: space-between;
     position: relative;
+
 }
 
 .middle_box {

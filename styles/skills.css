@@ -237,7 +237,10 @@
   /* Cards stack */
   #skills .skills_bottom_outer_box{
     width: 90%;
-    align-items: center;
+   
+    align-items: flex-start;
+    
+    align-self: center;
   }
 
   #skills .skills_bottom_inner_box{
